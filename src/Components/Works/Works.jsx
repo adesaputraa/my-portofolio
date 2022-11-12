@@ -4,7 +4,7 @@
         import Fiverr from "../../img/fiverr.png";
         import Amazon from "../../img/amazon.png";
         import Shopify from "../../img/Shopify.png";
-        import Facebook from "../../img/Facebook.png";
+        import Katalon from "../../img/katalon-studio.png";
 
         const Works = () => {
         return (
@@ -41,7 +41,7 @@
                             <img src={Shopify} alt="" />
                         </div>
                         <div className="w-secCircle">
-                            <img src={Facebook} alt="" />
+                            <img src={Katalon} alt="" />
                         </div>
 
                     </div>
