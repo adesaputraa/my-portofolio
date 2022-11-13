@@ -1,9 +1,9 @@
         import React from 'react'
         import './Works.css'
-        import Upwork from "../../img/Upwork.png";
-        import Fiverr from "../../img/fiverr.png";
-        import Amazon from "../../img/amazon.png";
-        import Shopify from "../../img/Shopify.png";
+        import Dian from "../../img/dian.png";
+        import Qase from "../../img/qase.png";
+        import Qa from "../../img/qa.png";
+        import Cy from "../../img/cy.png";
         import Katalon from "../../img/katalon-studio.png";
 
         const Works = () => {
@@ -29,16 +29,16 @@
                 <div className="w-right">
                     <div className="w-mainCircle">
                         <div className="w-secCircle">
-                            <img src={Upwork} alt="" />
+                            <img src={Dian} alt="" />
                         </div>
                         <div className="w-secCircle">
-                            <img src={Fiverr} alt="" />
+                            <img src={Qase} alt="" />
                         </div>
                         <div className="w-secCircle">
-                            <img src={Amazon} alt="" />
+                            <img src={Qa} alt="" />
                         </div>
                         <div className="w-secCircle">
-                            <img src={Shopify} alt="" />
+                            <img src={Cy} alt="" />
                         </div>
                         <div className="w-secCircle">
                             <img src={Katalon} alt="" />
