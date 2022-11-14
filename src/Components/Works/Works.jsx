@@ -1,56 +1,80 @@
-        import React from 'react'
-        import './Works.css'
-        import Dian from "../../img/dian.png";
-        import Qase from "../../img/qase.png";
-        import Qa from "../../img/qa.png";
-        import Cy from "../../img/cy.png";
-        import Katalon from "../../img/katalon-studio.png";
+import React, { useContext } from "react";
+import "./Works.css";
+import Dian from "../../img/dian.png";
+import cy from "../../img/cy.png";
+import Qa from "../../img/qa.png";
+import qase from "../../img/qase.png";
+import Katalon from "../../img/katalon-studio.png";
+import { themeContext } from "../../Context";
+import { motion } from "framer-motion";
+import {Link} from 'react-scroll'
+const Works = () => {
+  // context
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
-        const Works = () => {
-        return (
-            <div className="works">
-                <div className="awesome">
-                    <span>Works for All these</span>
-                    <span>Brands & Clients</span>
-                    <spane>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem sequi labore rem 
-                        <br />
-                        ismpu is simple
-                        <br/>
-                        adadada sdfsfs sfsfsfs sfsfsfsfs
-                        <br/>
-                        lorem ipsum is simple dummy text
-                    </spane>
-                    <button className="button s-button">Hire Me</button>
-                    <div className="blur s-blur1" style={{ background: "#ABF1FF94"}}></div>
-                </div>
+  // transition
+  return (
+    <div className="works" id="works">
+      {/* left side */}
+      <div className="w-left">
+        <div className="awesome">
+          {/* dark Mode */}
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Works for All these
+          </span>
+          <span>Brands & Clients</span>
+          <spane>
+            Lorem ispum is simpley dummy text of printing of printing Lorem
+            <br />
+            ispum is simpley dummy text of printingLorem ispum is simpley dummy
+            text
+            <br />
+            y dummy text of printingLorem
+            <br />
+            ispum is simpley dummy text of printing
+          </spane>
+          <Link to="contact" smooth={true} spy={true}>
+            <button className="button s-button">Hire Me</button>
+          </Link>
+          <div
+            className="blur s-blur1"
+            style={{ background: "#ABF1FF94" }}
+          ></div>
+        </div>
 
-                {/* right side */}
-                <div className="w-right">
-                    <div className="w-mainCircle">
-                        <div className="w-secCircle">
-                            <img src={Dian} alt="" />
-                        </div>
-                        <div className="w-secCircle">
-                            <img src={Qase} alt="" />
-                        </div>
-                        <div className="w-secCircle">
-                            <img src={Qa} alt="" />
-                        </div>
-                        <div className="w-secCircle">
-                            <img src={Cy} alt="" />
-                        </div>
-                        <div className="w-secCircle">
-                            <img src={Katalon} alt="" />
-                        </div>
+        {/* right side */}
+      </div>
+      <div className="w-right">
+        <motion.div
+          initial={{ rotate: 45 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ margin: "-40px" }}
+          transition={{ duration: 3.5, type: "spring" }}
+          className="w-mainCircle"
+        >
+          <div className="w-secCircle">
+            <img src={Dian} alt="" />
+          </div>
+          <div className="w-secCircle">
+            <img src={cy} alt="" />
+          </div>
+          <div className="w-secCircle">
+            <img src={Qa} alt="" />
+          </div>{" "}
+          <div className="w-secCircle">
+            <img src={qase} alt="" />
+          </div>
+          <div className="w-secCircle">
+            <img src={Katalon} alt="" />
+          </div>
+        </motion.div>
+        {/* background Circles */}
+        <div className="w-backCircle blueCircle"></div>
+        <div className="w-backCircle yellowCircle"></div>
+      </div>
+    </div>
+  );
+};
 
-                    </div>
-                    {/* background Circles */}
-                    <div className="w-backCircle blueCircle"></div>
-                    <div className="w-backCircle yellowCircle"></div>
-                </div>
-            </div>
-        )
-        }
-
-        export default Works
+export default Works;
