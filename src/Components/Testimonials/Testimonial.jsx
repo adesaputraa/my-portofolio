@@ -15,7 +15,7 @@ const Testimonial = () => {
     {
       img: kkm,
       review:
-        "PT Kumala Kencana Mandiri .",
+        "PT Kumala Kencana Mandiri . adalah perusahaan kontraktor Mekanikal dan elektrikal"
     },
     {
       img: profilePic2,
